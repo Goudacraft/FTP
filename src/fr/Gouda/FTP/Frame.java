@@ -20,7 +20,7 @@ import javax.swing.tree.TreeNode;
 
 public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // OYOYO
 
 		public JButton FTP = new JButton("FTP");
 		public JTree JT = new JTree();
