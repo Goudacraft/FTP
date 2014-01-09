@@ -1,10 +1,10 @@
 FTP LITE
 ===
 
-FTP LITE is a project to make a lite FTP acces.
+__FTP LITE__ is a project to make a lite FTP acces.
 
 ===
 
-Made by: <u>Goudacraft & __3751_Creator__.
+Made by: __Goudacraft__ & __3751_Creator__.
 
 ===
