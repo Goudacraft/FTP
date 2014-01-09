@@ -16,9 +16,9 @@ import javax.swing.JTree;
 
 
 
-public class Frame extends JFrame implements ActionListener {//Yo
+public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; // OYOYO
+	private static final long serialVersionUID = 1L;
 
 		public JButton FTP = new JButton("Parcourir");
 		public JTree JT = new JTree();
