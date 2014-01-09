@@ -162,7 +162,7 @@ public class Frame extends JFrame implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Object src = e.getSource();
-			if(src == FTP){
+			if(src == FTP){//??
 				String[] url = {"ftp://cucch_13675533:Halimi02@ftp.cuccfree.com"};
 				
 			try {
