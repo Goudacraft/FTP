@@ -1,6 +1,5 @@
 package fr.Gouda.FTP;
 
-import java.awt.Adjustable;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTree;
@@ -33,6 +33,8 @@ public class Frame extends JFrame implements ActionListener {
 		public JTree JT2 = new JTree();
 		public JScrollPane JSP2 = new JScrollPane();
 		public JMenuItem JMI = new JMenuItem("JMI");
+		public JScrollBar JSB = new JScrollBar();
+		
 		
 		
 		public void Next_Button(){					  
@@ -53,7 +55,7 @@ public class Frame extends JFrame implements ActionListener {
 		
 		
 		public void JTree(){
-
+			JT.add(JSB);
 			JT.setBounds(20,20,520,175);
 			JT.setEditable(true);
 			JT.setLayout(null);
@@ -85,8 +87,9 @@ public class Frame extends JFrame implements ActionListener {
 			
 		}
 		
-		public void JSP(){
-			add(JSP);
+		public void JSB(){
+			JSB.setAutoscrolls(isVisible());
+			add(JSB);
 		}
 		
 		public void JSP2(){
@@ -153,9 +156,10 @@ public class Frame extends JFrame implements ActionListener {
 		//	JTA();
 			//JTA2();
 			browse_Button();
-			JSP();
+			//JSP();
 			JT2();
 			JSP2();
+			JSB();
 		}
 		
 		
