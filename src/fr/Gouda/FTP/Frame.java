@@ -20,66 +20,64 @@ public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
-		public JButton FTP = new JButton("Parcourir");
-		public JTree JT = new JTree();
+		public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
+						JButton_Parcourir_FTP = new JButton("Parcourir");
+		
+		public JTree 	JTree_Local = new JTree(),
+						JTree_FTP = new JTree();
+		
 		public JMenuBar JMB = new JMenuBar();
+		
 		public JMenu JM = new JMenu("JM");
-		public JTextArea JTA = new JTextArea();
-		public JScrollPane JSP = new JScrollPane(JT,
-			      JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
-			      JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		public JTextArea JTA2 = new JTextArea();
-		public JButton JB2 = new JButton("Parcourir");
-		public JTree JT2 = new JTree();
-		public JScrollPane JSP2 = new JScrollPane();
+		
+		public JTextArea 	JTA = new JTextArea(),
+							JTA2 = new JTextArea();
+		
+		public JScrollPane 	JSP = new JScrollPane(JTree_Local, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
+							JSP2 = new JScrollPane();
+		
 		public JMenuItem JMI = new JMenuItem("JMI");
-		public JScrollBar JSB = new JScrollBar();
 		
 		
 		
-		public void Next_Button(){					  
-			FTP.setFocusPainted(false);
-			FTP.addActionListener(this);
-			FTP.setBounds(575, 225,100,25);
+		public void Button(){					  
+			JButton_Parcourir_Local.setFocusPainted(false);
+			JButton_Parcourir_Local.addActionListener(this);
+			JButton_Parcourir_Local.setBounds(575, 225,100,25);
 			
-			add(FTP);
+			add(JButton_Parcourir_Local);
+			
+			/*-------------------------*/
+			
+			JButton_Parcourir_FTP.setFocusPainted(false);
+			JButton_Parcourir_FTP.addActionListener(this);
+			JButton_Parcourir_FTP.setBounds(575, 20,100,25);
+			
+			add(JButton_Parcourir_FTP);
 		}
 		
-		public void browse_Button(){
-			JB2.setFocusPainted(false);
-			JB2.addActionListener(this);
-			JB2.setBounds(575, 20,100,25);
-			add(JB2);
+		public void Tree(){
+			JTree_Local.add(JSB);
+			JTree_Local.setBounds(20,20,520,175);
+			JTree_Local.setEditable(true);
+			JTree_Local.setLayout(null);
+			
+			add(JTree_Local);		
+			
+			/*-------------------------*/
+			
+			JTree_FTP.add(JSP2);
+			JTree_FTP.setBounds(20,225, 520,175);
+			JTree_FTP.setEditable(true);
+			
+			add(JTree_FTP);
 		}
 		
-		
-		
-		public void JTree(){
-			JT.add(JSB);
-			JT.setBounds(20,20,520,175);
-			JT.setEditable(true);
-			JT.setLayout(null);
-			add(JT);		
-			
-			
-		}
-		
-		
-		public void JT2(){
-			JT2.add(JSP2);
-			JT2.setBounds(20,225, 520,175);
-			JT2.setEditable(true);
-			add(JT2);
-			
-		}
-		
-		
-		
-		public void JMB(){
+		public void MenuBar(){
 			setJMenuBar(JMB);
 			JMB.add(JM);
 			
-				}
+		}
 		
 		public void JMI(){
 			
@@ -143,37 +141,24 @@ public class Frame extends JFrame implements ActionListener {
 		}
 		*/
 		
-		
-		public void preInit(){
-			
-		}
-		
-		
 		public void init(){
-			Next_Button();
-			JTree();
+			Button();
+			Tree();
 			JMB();
 		//	JTA();
 			//JTA2();
-			browse_Button();
 			//JSP();
-			JT2();
 			JSP2();
 			JSB();
 		}
-		
-		
 		
 		public Frame(){
 			super("FTP");
 			setLayout(null);
 			
-			preInit();
 			init();
 		}		
 
-		
-		
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Object src = e.getSource();
