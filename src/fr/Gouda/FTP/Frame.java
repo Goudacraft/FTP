@@ -18,7 +18,7 @@ import javax.swing.JTree;
 
 public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; // Salut
+	private static final long serialVersionUID = 1L; // Salut je vais faire un peu plus.
 
 		public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 						JButton_Parcourir_FTP = new JButton("Parcourir");
