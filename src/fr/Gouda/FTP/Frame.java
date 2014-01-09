@@ -1,20 +1,18 @@
 package fr.Gouda.FTP;
 
+import java.awt.Adjustable;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Hashtable;
-import java.util.Vector;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTree;
-import javax.swing.tree.TreeModel;
-import javax.swing.tree.TreeNode;
 
 
 
@@ -22,15 +20,20 @@ public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L; // OYOYO
 
-		public JButton FTP = new JButton("FTP");
+		public JButton FTP = new JButton("Parcourir");
 		public JTree JT = new JTree();
 		public JMenuBar JMB = new JMenuBar();
 		public JMenu JM = new JMenu("JM");
 		public JTextArea JTA = new JTextArea();
-		public JScrollPane JSP = new JScrollPane(JTA);
+		public JScrollPane JSP = new JScrollPane(JT,
+			      JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+			      JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		public JTextArea JTA2 = new JTextArea();
-		public JButton JB2 = new JButton("JB");
+		public JButton JB2 = new JButton("Parcourir");
 		public JTree JT2 = new JTree();
+		public JScrollPane JSP2 = new JScrollPane();
+		public JMenuItem JMI = new JMenuItem("JMI");
+		
 		
 		public void Next_Button(){					  
 			FTP.setFocusPainted(false);
@@ -50,22 +53,48 @@ public class Frame extends JFrame implements ActionListener {
 		
 		
 		public void JTree(){
-					
-			add(JT);
+
+			JT.setBounds(20,20,520,175);
+			JT.setEditable(true);
+			JT.setLayout(null);
+			add(JT);		
+			
 			
 		}
 		
+		
 		public void JT2(){
-			
+			JT2.add(JSP2);
+			JT2.setBounds(20,225, 520,175);
+			JT2.setEditable(true);
 			add(JT2);
+			
 		}
+		
+		
 		
 		public void JMB(){
 			setJMenuBar(JMB);
 			JMB.add(JM);
+			
 				}
 		
-		public void JTA(){
+		public void JMI(){
+			
+			add(JMI);
+			
+		}
+		
+		public void JSP(){
+			add(JSP);
+		}
+		
+		public void JSP2(){
+			JSP2.setAlignmentX(getX());;
+			
+		}
+		
+		/*public void JTA(){
 			JTA.add(JT);
 			JTA.setBounds(20,20,520,175);
 			JTA.setEditable(false);
@@ -80,7 +109,11 @@ public class Frame extends JFrame implements ActionListener {
 			add(JTA2);
 		}
 		
-		/*
+		public void JSP(){
+			JSP.setBounds(20,225,50,175);
+			add(JSP);
+		}
+		
 		public void JTree(Hashtable value){
 		JTree tree = new JTree(System.getProperties());
 		}
@@ -117,10 +150,14 @@ public class Frame extends JFrame implements ActionListener {
 			Next_Button();
 			JTree();
 			JMB();
-			JTA();
-			JTA2();
+		//	JTA();
+			//JTA2();
 			browse_Button();
+			JSP();
+			JT2();
+			JSP2();
 		}
+		
 		
 		
 		public Frame(){
