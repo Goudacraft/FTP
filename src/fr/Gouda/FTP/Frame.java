@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JFrame; 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -18,8 +18,7 @@ import javax.swing.JTree;
 
 public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; // Salut je vais faire un peu plus. Kikou lol.
-
+	private static final long serialVersionUID = 1L; // Salut je vais faire un peu plus.  low low prices!!!
 		public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 						JButton_Parcourir_FTP = new JButton("Parcourir");
 		
@@ -57,7 +56,7 @@ public class Frame extends JFrame implements ActionListener {
 		}
 		
 		public void Tree(){
-			JTree_Local.add(JSB);
+			JTree_Local.add(JSP);
 			JTree_Local.setBounds(20,20,520,175);
 			JTree_Local.setEditable(true);
 			JTree_Local.setLayout(null);
@@ -85,16 +84,16 @@ public class Frame extends JFrame implements ActionListener {
 			
 		}
 		
-		public void JSB(){
+		/*public void JSB(){
 			JSB.setAutoscrolls(isVisible());
 			add(JSB);
 		}
-		
+		*/
 		public void JSP2(){
 			JSP2.setAlignmentX(getX());;
 			
 		}
-		
+		//???? t'as changé des trucs?ba a toi de regarder.
 		/*public void JTA(){
 			JTA.add(JT);
 			JTA.setBounds(20,20,520,175);
@@ -144,12 +143,12 @@ public class Frame extends JFrame implements ActionListener {
 		public void init(){
 			Button();
 			Tree();
-			JMB();
+			//JMB();
 		//	JTA();
 			//JTA2();
 			//JSP();
 			JSP2();
-			JSB();
+		//	JSB();
 		}
 		
 		public Frame(){
@@ -162,7 +161,7 @@ public class Frame extends JFrame implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Object src = e.getSource();
-			if(src == FTP){//??
+			if(src == JButton_Parcourir_Local ){
 				String[] url = {"ftp://cucch_13675533:Halimi02@ftp.cuccfree.com"};
 				
 			try {
