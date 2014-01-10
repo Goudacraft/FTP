@@ -56,7 +56,7 @@ public class Frame extends JFrame implements ActionListener {
 		}
 		
 		public void Tree(){
-			JTree_Local.add(JSP);
+		//	JTree_Local.add(JSP);
 			JTree_Local.setBounds(20,20,520,175);
 			JTree_Local.setEditable(true);
 			JTree_Local.setLayout(null);
