@@ -18,16 +18,18 @@ import javax.swing.JTree;
 
 public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; // Salut je vais faire un peu plus.  low low prices!!!
+	private static final long serialVersionUID = 1L; 
 		public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
-						JButton_Parcourir_FTP = new JButton("Parcourir");
+						JButton_Parcourir_FTP = new JButton("Parcourir"),
+						JButton_Console = new JButton("Console");
 		
 		public JTree 	JTree_Local = new JTree(),
 						JTree_FTP = new JTree();
 		
 		public JMenuBar JMB = new JMenuBar();
 		
-		public JMenu JM = new JMenu("JM");
+		public JMenu JM = new JMenu("File"),
+					 JM2 = new JMenu("Edit");
 		
 		public JTextArea 	JTA = new JTextArea(),
 							JTA2 = new JTextArea();
@@ -35,7 +37,8 @@ public class Frame extends JFrame implements ActionListener {
 		public JScrollPane 	JSP = new JScrollPane(JTree_Local, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
 							JSP2 = new JScrollPane();
 		
-		public JMenuItem JMI = new JMenuItem("JMI");
+		public JMenuItem JMI = new JMenuItem("Ouvrir"),
+						 JMI2 = new JMenuItem("Enregistrer");	
 		
 		
 		
@@ -52,7 +55,22 @@ public class Frame extends JFrame implements ActionListener {
 			JButton_Parcourir_FTP.addActionListener(this);
 			JButton_Parcourir_FTP.setBounds(575, 20,100,25);
 			
+			
 			add(JButton_Parcourir_FTP);
+			
+			/*--------------------------*/
+			
+			
+			JButton_Console.setFocusPainted(false);
+			JButton_Console.addActionListener(this);
+			JButton_Console.setBounds(613, 418,100,25);
+			JButton_Console.setOpaque(false);
+			JButton_Console.setContentAreaFilled(false);   
+			JButton_Console.setBorderPainted(false);
+			JButton_Console.setBorder(null); 
+			
+		
+			add(JButton_Console);
 		}
 		
 		public void Tree(){
@@ -75,13 +93,14 @@ public class Frame extends JFrame implements ActionListener {
 		public void MenuBar(){
 			setJMenuBar(JMB);
 			JMB.add(JM);
+			JMB.add(JM2);
 			
 		}
 		
 		public void Menu(){
 			
 			JM.add(JMI);
-			
+			JM.add(JMI2);
 		}
 		
 		public void JMI(){
