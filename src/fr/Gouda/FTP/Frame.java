@@ -78,6 +78,12 @@ public class Frame extends JFrame implements ActionListener {
 			
 		}
 		
+		public void Menu(){
+			
+			JM.add(JMI);
+			
+		}
+		
 		public void JMI(){
 			
 			add(JMI);
@@ -143,12 +149,15 @@ public class Frame extends JFrame implements ActionListener {
 		public void init(){
 			Button();
 			Tree();
-			//JMB();
+			MenuBar();
 		//	JTA();
 			//JTA2();
 			//JSP();
 			JSP2();
 		//	JSB();
+			JMI();
+			Menu();
+		
 		}
 		
 		public Frame(){
@@ -161,8 +170,9 @@ public class Frame extends JFrame implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Object src = e.getSource();
-			if(src == JButton_Parcourir_Local ){
-				String[] url = {"ftp://cucch_13675533:Halimi02@ftp.cuccfree.com"};
+			if(src == JButton_Parcourir_FTP){
+				String[] url = {"ftp://cucch_13675533:Halimi02@ftp.cuccfree.com/htdocs/"};
+				
 				
 			try {
 				for(int i=0; i<=url.length; i++){
