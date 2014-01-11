@@ -7,12 +7,12 @@ import javax.swing.UIManager;
 public class Main {
 	public static void main(String[] args) {
 		
-		/*try{
+		try{
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		}catch (Exception e){
 			System.out.println("Unable to load Windows look and feel");
 		}
-		*/
+		
 		Frame GUI = new Frame();
 			
 		GUI.setSize(700, 500);
