@@ -24,11 +24,6 @@ TODO: Faire Des JPanel.
 
  */
 
-	private static final long serialVersionUID = 1L;
-
-	public JPanel   JPanel_Local = new JPanel(),
-					Jpanel_FTP = new JPanel();
-
 	public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 					JButton_Parcourir_FTP = new JButton("Parcourir"),
 					JButton_Console = new JButton("Console");
