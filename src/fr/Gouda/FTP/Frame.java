@@ -7,6 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
+/*
+TODO: Faire Des JPanel.
+
+ */
+
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
