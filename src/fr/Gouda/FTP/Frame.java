@@ -1,10 +1,11 @@
 package fr.Gouda.FTP;
 
-import java.awt.Desktop;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 
 /*
@@ -15,6 +16,9 @@ TODO: Faire Des JPanel.
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
+
+	public JPanel   JPanel_Local = new JPanel(),
+					Jpanel_FTP = new JPanel();
 
 	public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 					JButton_Parcourir_FTP = new JButton("Parcourir"),
@@ -40,6 +44,13 @@ public class Frame extends JFrame implements ActionListener {
 	public JSeparator JSeperator_Split = new JSeparator();
 
 
+	public void JPanel(){
+		JPanel_Local.setBounds(0,0,695,225);
+		Border border = BorderFactory.createLineBorder(Color.blue);
+		JPanel_Local.setBorder(border);
+		add(JPanel_Local);
+	}
+
 	public void Seperator(){
 		JSeperator_Split.setOrientation(SwingConstants.HORIZONTAL);
 
@@ -49,7 +60,7 @@ public class Frame extends JFrame implements ActionListener {
 	public void Button(){
 		JButton_Parcourir_Local.setFocusPainted(false);
 		JButton_Parcourir_Local.addActionListener(this);
-		JButton_Parcourir_Local.setBounds(575, 225,100,25);
+		JButton_Parcourir_Local.setBounds(575, 225, 100, 25);
 			
 		add(JButton_Parcourir_Local);
 			
@@ -82,7 +93,7 @@ public class Frame extends JFrame implements ActionListener {
 		JTree_Local.setEditable(true);
 		JTree_Local.setLayout(null);
 
-		add(JTree_Local);
+		JPanel_Local.add(JTree_Local);
 
 		/*-------------------------*/
 
@@ -116,6 +127,7 @@ public class Frame extends JFrame implements ActionListener {
 	}
 
 	public void init(){
+		JPanel();
 		Seperator();
 		Button();
 		Tree();
