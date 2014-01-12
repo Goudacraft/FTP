@@ -109,12 +109,7 @@ public class Frame extends JFrame implements ActionListener {
 			add(JMI);
 			
 		}
-		
-		/*public void JSB(){
-			JSB.setAutoscrolls(isVisible());
-			add(JSB);
-		}
-		*/
+	
 		public void JSP2(){
 			JSP2.setAlignmentX(getX());;
 			
