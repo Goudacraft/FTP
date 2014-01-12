@@ -34,7 +34,7 @@ TODO: Faire Des JPanel.
 	public JMenuBar JMB = new JMenuBar();
 
 	public JMenu JM = new JMenu("File"),
-				 JM2 = new JMenu("Edit");
+				 JM2 = new JMenu("Edit"); // Lol
 
 	public JTextArea 	JTA = new JTextArea(),
 						JTA2 = new JTextArea();
