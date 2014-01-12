@@ -16,9 +16,10 @@ import javax.swing.JTree;
 
 
 
-public class Frame extends JFrame implements ActionListener { // Branch test Alexandre.
+public class Frame extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; 
+	private static final long serialVersionUID = 1L;
+
 		public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 						JButton_Parcourir_FTP = new JButton("Parcourir"),
 						JButton_Console = new JButton("Console");
@@ -118,7 +119,6 @@ public class Frame extends JFrame implements ActionListener { // Branch test Ale
 			JSP2.setAlignmentX(getX());;
 			
 		}
-		//???? t'as chang� des trucs?ba a toi de regarder.
 		/*public void JTA(){
 			JTA.add(JT);
 			JTA.setBounds(20,20,520,175);
