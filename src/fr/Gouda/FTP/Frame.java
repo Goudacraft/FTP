@@ -14,7 +14,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTree;
 
-
+/**
+ * ZONE DE NOTES:
+ * Test
+ *
+ *
+ * */
 
 public class Frame extends JFrame implements ActionListener {
 
