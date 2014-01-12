@@ -17,7 +17,7 @@ import javax.swing.JTree;
 import javax.swing.*;
 
 
-public class Frame extends JFrame implements ActionListener {
+public class Frame extends JFrame implements ActionListener {//Kikou
 
 	private static final long serialVersionUID = 1L;
 
