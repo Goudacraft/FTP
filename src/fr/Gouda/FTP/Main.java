@@ -1,8 +1,6 @@
 package fr.Gouda.FTP;
 
-import java.awt.Color;
-import javax.swing.JFrame;
-import javax.swing.UIManager;
+import javax.swing.*;
 
 public class Main {
 	public static void main(String[] args) {
