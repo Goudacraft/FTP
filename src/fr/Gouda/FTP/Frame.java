@@ -18,7 +18,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 
-public class Frame extends JFrame implements ActionListener {//Kikou 2.0
+public class Frame extends JFrame implements ActionListener {//Kikou 2.0.
 /*
 TODO: Faire Des JPanel.
 
