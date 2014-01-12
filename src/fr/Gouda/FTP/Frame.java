@@ -18,16 +18,11 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 
-<<<<<<< HEAD
 public class Frame extends JFrame implements ActionListener {//Kikou
-=======
 /*
 TODO: Faire Des JPanel.
 
  */
-
-public class Frame extends JFrame implements ActionListener {
->>>>>>> origin/master
 
 	private static final long serialVersionUID = 1L;
 
