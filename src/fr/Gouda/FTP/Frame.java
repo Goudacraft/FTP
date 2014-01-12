@@ -4,6 +4,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JFrame; 
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTree;
+
+
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -30,7 +40,7 @@ public class Frame extends JFrame implements ActionListener {
 	public JMenuBar JMB = new JMenuBar();
 
 	public JMenu JM = new JMenu("File"),
-				 JM2 = new JMenu("Edit");
+				 JM2 = new JMenu("Edit"); // Lol
 
 	public JTextArea 	JTA = new JTextArea(),
 						JTA2 = new JTextArea();
