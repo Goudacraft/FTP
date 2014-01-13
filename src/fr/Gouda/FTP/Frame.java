@@ -60,7 +60,7 @@ public class Frame extends JFrame implements ActionListener {
 
 		JPanel_FTP.add(Border_FTP);
 
-        /*-----------------d-------------*/
+        /*------------------------------*/
 
 		Border_Console.setBorder(BorderFactory.createTitledBorder("Console"));
 		Border_Console.setBounds(5, 5, 389, 430);
