@@ -12,17 +12,17 @@ import java.awt.*;
 public class Console extends Frame{
 	public static void Error(String error){
 		JTextArea_Console.setForeground(Color.RED);
-		JTextArea_Console.add(error + "\n");
+		//JTextArea_Console.add(error + "\n");
 	}
 
 	public static void Info(String info){
 		JTextArea_Console.setForeground(Color.BLACK);
-		JTextArea_Console.append(info + "\n");
+	//	JTextArea_Console.append(info + "\n");
 	}
 
 	public static void Warning(String warn){
 		JTextArea_Console.setForeground(Color.ORANGE);
-		JTextArea_Console.append(warn + "\n");
+	//	JTextArea_Console.append(warn + "\n");
 	}
 
 /*	public static void Error(String error){
