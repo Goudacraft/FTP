@@ -40,7 +40,7 @@ public class Frame extends JFrame implements ActionListener {
 	public JMenuBar JMB = new JMenuBar();
 
 	public JMenu JM = new JMenu("File"),
-				 JM2 = new JMenu("Edit"); // Lol
+				 JM2 = new JMenu("Edit"); 
 
 	public JTextArea 	JTA = new JTextArea(),
 						JTA2 = new JTextArea();
@@ -98,7 +98,6 @@ public class Frame extends JFrame implements ActionListener {
 	}
 		
 	public void Tree(){
-	//	JTree_Local.add(JSP);
 		JTree_Local.setBounds(20, 20, 520, 175);
 		JTree_Local.setEditable(true);
 		JTree_Local.setLayout(null);
