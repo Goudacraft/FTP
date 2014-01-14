@@ -188,13 +188,14 @@ public class Frame extends JFrame implements ActionListener {
 	public void preInit(){
 		Font();
 		Border();
+		Button();
 	}
 
 	public void init(){
 		TextPane();
 		JPanel();
 		Seperator();
-		Button();
+		
 		Tree();
 		MenuBar();
 		JSP2();
