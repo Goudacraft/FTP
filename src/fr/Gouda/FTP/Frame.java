@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Frame extends JFrame implements ActionListener {
+public class Frame extends JFrame implements ActionListener {   /** Elie */
 
 	private static final long serialVersionUID = 1L;
 
