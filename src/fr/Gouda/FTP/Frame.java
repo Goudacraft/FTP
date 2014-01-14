@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+<<<<<<< HEAD
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
@@ -13,6 +14,27 @@ public class Frame extends JFrame implements ActionListener {
 	public JPanel   JPanel_Local = new JPanel(),
 					JPanel_FTP = new JPanel(),
 					JPanel_Console = new JPanel();
+=======
+import javax.swing.JButton;
+import javax.swing.JFrame; 
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTree;
+
+
+import javax.swing.*;
+import javax.swing.border.Border;
+
+
+public class Frame extends JFrame implements ActionListener {//Kikou 2.0.
+/*
+TODO: Faire Des JPanel.
+
+ */
+>>>>>>> 2e11517a9998964d510cb9284a447febac66795d
 
 	public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
 					JButton_Parcourir_FTP = new JButton("Parcourir"),
@@ -23,9 +45,14 @@ public class Frame extends JFrame implements ActionListener {
 
 	public JMenuBar JMB = new JMenuBar();
 
+<<<<<<< HEAD
 	public JMenu    JM = new JMenu("File"),
 				    JM2 = new JMenu("Edit"),
 					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion.
+=======
+	public JMenu JM = new JMenu("File"),
+				 JM2 = new JMenu("Edit"); // Lol
+>>>>>>> 2e11517a9998964d510cb9284a447febac66795d
 
 	public static JEditorPane JTextArea_Console = new JEditorPane();
 		
