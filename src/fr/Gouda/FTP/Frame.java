@@ -215,13 +215,14 @@ TODO: Faire Des JPanel.
 	public void preInit(){
 		Font();
 		Border();
+		Button();
 	}
 
 	public void init(){
 		TextPane();
 		JPanel();
 		Seperator();
-		Button();
+		
 		Tree();
 		MenuBar();
 		JSP2();
