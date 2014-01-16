@@ -5,8 +5,9 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
-public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
+public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
@@ -21,19 +22,22 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 	public JTree 	JTree_Local = new JTree(),
 					JTree_FTP = new JTree();
 
-	public JMenuBar JMB = new JMenuBar();
+	public JMenuBar JMenuBar = new JMenuBar();
 
-	public JMenu    JM = new JMenu("File"),
-				    JM2 = new JMenu("Edit"),
-					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion.
+	public JMenu    JMenu_File = new JMenu("File"),
+				    JMenu_Edit = new JMenu("Edit"),
+					JMenu_Connexion = new JMenu("Connexion"),   // TODO: Faire nouveau Frame pour entrer connexion.
+					JMenu_About = new JMenu("About");
+
+	public JMenuItem    JMenuItem_Ouvrir = new JMenuItem("Ouvrir"),             // JMenu_File
+						JMenuItem_Enregistrer = new JMenuItem("Enregistrer"),   // JMenu_File
+
+						JMenuItem_SurNous = new JMenuItem("Sur Nous"),          // JMenu_About
+						JMenuItem_Rapport = new JMenuItem("Rapport Erreur");    // JMenu_About
 
 	public static JTextPane JTextPane_Console = new JTextPane();
 		
-	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
-						JSP2 = new JScrollPane();
-		
-	public JMenuItem JMI = new JMenuItem("Ouvrir"),
-					 JMI2 = new JMenuItem("Enregistrer");
+	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
 	public JSeparator JSeperator_Split = new JSeparator();
 
@@ -128,7 +132,6 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 	}
 		
 	public void Tree(){
-	//	JTree_Local.add(JSP);
 		JTree_Local.setBounds(20, 20, 520, 175);
 		JTree_Local.setEditable(true);
 		JTree_Local.setLayout(null);
@@ -137,7 +140,6 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 
 		/*-------------------------*/
 
-		JTree_FTP.add(JSP2);
 		JTree_FTP.setBounds(20,225, 520,175);
 		JTree_FTP.setEditable(true);
 
@@ -145,25 +147,20 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 	}
 		
 	public void MenuBar(){
-		setJMenuBar(JMB);
-		JMB.add(JM);
-		JMB.add(JM2);
-		JMB.add(JMenu_Connexion);
+		setJMenuBar(JMenuBar);
+		JMenuBar.add(JMenu_File);
+		JMenuBar.add(JMenu_Edit);
+		JMenuBar.add(JMenu_Connexion);
+		JMenuBar.add(JMenu_About);
 	}
 		
-	public void Menu(){
+	public void MenuItem(){
+		JMenu_File.add(JMenuItem_Enregistrer);
+		JMenu_File.add(JMenuItem_Ouvrir);
 
-		JM.add(JMI);
-		JM.add(JMI2);
-	}
-		
-	public void JMI(){
-		add(JMI);
-	}
-	
-	public void JSP2(){
-		JSP2.setAlignmentX(getX());;
-			
+		JMenu_About.add(JMenuItem_SurNous);
+		JMenu_About.addSeparator();
+		JMenu_About.add(JMenuItem_Rapport);
 	}
 
 	public void preInit(){
@@ -176,12 +173,9 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 		TextPane();
 		JPanel();
 		Seperator();
-		
 		Tree();
 		MenuBar();
-		JSP2();
-		JMI();
-		Menu();
+		MenuItem();
 		Label();
 	}
 		
@@ -197,7 +191,6 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		if(src == JButton_Console){
-			System.out.println(getSize().getWidth());
 			if(getSize().getWidth() >= 750){
 				/** If True (Retirer) */
 				for(int i=1100; i > 699; i--){
@@ -215,6 +208,14 @@ public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
 			Console.Info("INFO !!!!!");
 			Console.Warning("WARNING !!!!!");
 			Console.Error("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
+		}
+		if(src == JMenuItem_SurNous){
+			try {
+				new About();
+			} catch (Exception e1) {
+				System.out.println("Cannot load About.java");
+				e1.printStackTrace();
+			}
 		}
 	}
 }
