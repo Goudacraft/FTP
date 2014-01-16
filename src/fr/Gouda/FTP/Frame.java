@@ -6,24 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-<<<<<<< HEAD
-import javax.swing.JButton;
-import javax.swing.JFrame; 
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTree;
-
-
-import javax.swing.*;
-import javax.swing.border.Border;
-
 public class Frame extends JFrame implements ActionListener {
-=======
-public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
->>>>>>> origin/AlexandreSP
 
 	private static final long serialVersionUID = 1L;
 
