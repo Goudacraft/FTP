@@ -6,11 +6,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-<<<<<<< HEAD
-public class Frame extends JFrame implements ActionListener {   /** Elie */
-=======
-public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
->>>>>>> origin/AlexandreSP
+public class Frame extends JFrame implements ActionListener {
+
 
 	private static final long serialVersionUID = 1L;
 
