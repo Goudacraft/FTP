@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+<<<<<<< HEAD
 import javax.swing.JButton;
 import javax.swing.JFrame; 
 import javax.swing.JMenu;
@@ -20,6 +21,9 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 public class Frame extends JFrame implements ActionListener {
+=======
+public class Frame extends JFrame implements ActionListener { /** ALEXANDRE */
+>>>>>>> origin/AlexandreSP
 
 	private static final long serialVersionUID = 1L;
 
@@ -40,9 +44,9 @@ public class Frame extends JFrame implements ActionListener {
 				    JM2 = new JMenu("Edit"),
 					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion.
 
-	public static JEditorPane JTextArea_Console = new JEditorPane();
+	public static JTextPane JTextPane_Console = new JTextPane();
 		
-	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextArea_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
+	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
 						JSP2 = new JScrollPane();
 		
 	public JMenuItem JMI = new JMenuItem("Ouvrir"),
@@ -50,31 +54,13 @@ public class Frame extends JFrame implements ActionListener {
 
 	public JSeparator JSeperator_Split = new JSeparator();
 
-	public JLabel   Border_Local = new JLabel(),
-					Border_FTP = new JLabel(),
-					Border_Console = new JLabel();
+	public JLabel   Border_Console = new JLabel();
 
 	public void Font(){
-		Border_Local.setFont(new Font("Arial", Font.PLAIN, 12));
-		Border_FTP.setFont(new Font("Arial", Font.PLAIN, 12));
 		Border_Console.setFont(new Font("Arial", Font.PLAIN, 12));
 	}
 
 	public void Border(){
-		Border_Local.setBorder(BorderFactory.createTitledBorder("Local"));
-		Border_Local.setBounds(265, 5, 83, 60);
-
-		JPanel_Local.add(Border_Local);
-
-        /*------------------------------*/
-
-		Border_FTP.setBorder(BorderFactory.createTitledBorder("FTP"));
-		Border_FTP.setBounds(354, 5, 83, 60);
-
-		JPanel_FTP.add(Border_FTP);
-
-        /*------------------------------*/
-
 		Border_Console.setBorder(BorderFactory.createTitledBorder("Console"));
 		Border_Console.setBounds(5, 5, 389, 430);
 
@@ -153,8 +139,7 @@ public class Frame extends JFrame implements ActionListener {
 
 	public void TextPane(){
 		JScrollPane_Console.setBounds(15, 20, 369, 405);
-	//	JTextArea_Console.setWrapStyleWord(false);
-		JTextArea_Console.setEditable(false);
+		JTextPane_Console.setEditable(false);
 
 		JPanel_Console.add(JScrollPane_Console);
 	}
@@ -245,16 +230,7 @@ public class Frame extends JFrame implements ActionListener {
 			Console.Error("ERROR !!!!!");
 			Console.Info("INFO !!!!!");
 			Console.Warning("WARNING !!!!!");
-		/*	String[] url = {"ftp://cucch_13675533:Halimi02@ftp.cuccfree.com/htdocs/"};
-			try {
-				for(int i=0; i<=url.length; i++){
-					try{
-						Desktop.getDesktop().browse(java.net.URI.create(url[i]));
-					}catch(Exception ee){}
-				}
-			} catch (Exception er) {
-				System.out.println(er.getMessage());
-			}*/
+			Console.Error("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
 		}
 	}
 }
