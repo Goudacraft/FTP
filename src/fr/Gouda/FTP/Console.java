@@ -1,7 +1,6 @@
 package fr.Gouda.FTP;
 
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
+import javax.swing.text.*;
 import java.awt.*;
 
 /**
@@ -9,32 +8,31 @@ import java.awt.*;
  *
  * Class pour sortir des types de messages différent dans la console.
  */
+
 public class Console extends Frame{
+
+	private static StyledDocument Text = JTextPane_Console.getStyledDocument();
+	private static SimpleAttributeSet Colors = new SimpleAttributeSet();
+
 	public static void Error(String error){
-		JTextArea_Console.setForeground(Color.RED);
-		//JTextArea_Console.add(error + "\n");
+		StyleConstants.setForeground(Colors, Color.RED);
+		try{
+			Text.insertString(0, error+"\n", Colors);
+		}catch(Exception e) { System.out.println(e); }
+
 	}
 
 	public static void Info(String info){
-		JTextArea_Console.setForeground(Color.BLACK);
-	//	JTextArea_Console.append(info + "\n");
+		StyleConstants.setForeground(Colors, Color.BLACK);
+		try{
+			Text.insertString(0, info+"\n", Colors);
+		}catch(Exception e) { System.out.println(e); }
 	}
 
 	public static void Warning(String warn){
-		JTextArea_Console.setForeground(Color.ORANGE);
-	//	JTextArea_Console.append(warn + "\n");
+		StyleConstants.setForeground(Colors, Color.ORANGE);
+		try{
+			Text.insertString(0, warn+"\n", Colors);
+		}catch(Exception e) { System.out.println(e); }
 	}
-
-/*	public static void Error(String error){
-		JTextArea_Console.append("<html><font color=red>" + error + "</font><br/></html>");
-	}
-
-	public static void Info(String info){
-		JTextArea_Console.append("<html><font color=red>" + info + "</font><br/></html>");
-	}
-
-	public static void Warning(String warn){
-		JTextArea_Console.append("<html><font color=red>" + warn + "</font><br/></html>");
-	}*/
-
 }
