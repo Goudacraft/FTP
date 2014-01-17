@@ -1,4 +1,4 @@
-package fr.Gouda.FTP;
+package fr.fr.FTP.About;
 
 public class Erreur {
 

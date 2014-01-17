@@ -1,4 +1,4 @@
-package fr.Gouda.FTP;
+package fr.fr.FTP.About;
 
 import javax.swing.text.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.awt.*;
  * Class pour sortir des types de messages différent dans la console.
  */
 
-public class Console extends Frame{
+public class Console extends fr.fr.FTP.About.Frame {
 
 	private static StyledDocument Text = JTextPane_Console.getStyledDocument();
 	private static SimpleAttributeSet Colors = new SimpleAttributeSet();
@@ -30,9 +30,18 @@ public class Console extends Frame{
 	}
 
 	public static void Warning(String warn){
-		StyleConstants.setForeground(Colors, Color.ORANGE);
+		Color ORANGE = new Color(252, 156, 51);
+		StyleConstants.setForeground(Colors, ORANGE);
 		try{
 			Text.insertString(0, warn+"\n", Colors);
+		}catch(Exception e) { System.out.println(e); }
+	}
+
+	public static void Succes(String succes){
+		Color DARK_GREEN = new Color(58, 157, 52);
+		StyleConstants.setForeground(Colors, DARK_GREEN);
+		try{
+			Text.insertString(0, succes+"\n", Colors);
 		}catch(Exception e) { System.out.println(e); }
 	}
 }
