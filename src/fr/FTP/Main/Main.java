@@ -1,4 +1,4 @@
-package fr.fr.FTP.About;
+package fr.FTP.Main;
 
 import javax.swing.*;
 

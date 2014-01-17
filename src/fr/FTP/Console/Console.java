@@ -1,4 +1,4 @@
-package fr.fr.FTP.About;
+package fr.FTP.Console;
 
 import javax.swing.text.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.awt.*;
  * Class pour sortir des types de messages différent dans la console.
  */
 
-public class Console extends fr.fr.FTP.About.Frame {
+public class Console extends fr.FTP.Main.Frame {
 
 	private static StyledDocument Text = JTextPane_Console.getStyledDocument();
 	private static SimpleAttributeSet Colors = new SimpleAttributeSet();

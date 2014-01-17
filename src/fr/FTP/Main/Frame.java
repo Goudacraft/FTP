@@ -1,6 +1,7 @@
-package fr.fr.FTP.About;
+package fr.FTP.Main;
 
-import fr.fr.FTP.About.About;
+import fr.FTP.Console.Console;
+import fr.FTP.About.AboutMain;
 
 import javax.swing.*;
 import javax.swing.border.Border;
