@@ -13,10 +13,10 @@ public class Main {
 		
 		Frame GUI = new Frame();
 			
-		GUI.setSize(700, 500);
+		GUI.setSize(690, 490);
 		GUI.setLocationRelativeTo(null);
 		GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GUI.setVisible(true);
-	//	GUI.setResizable(false);
+		GUI.setResizable(false);
 	}
 }

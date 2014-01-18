@@ -197,13 +197,13 @@ public class Frame extends JFrame implements ActionListener {
 		if(src == JButton_Console){
 			if(getSize().getWidth() >= 750){
 				/** If True (Retirer) */
-				for(int i=1100; i > 699; i--){
-					setSize(i, 500);
+				for(int i=1090; i > 689; i--){
+					setSize(i, 490);
 				}
 			}else{
 				/** If False (Etirer) */
-				for(int i=699; i < 1100; i++){
-					setSize(i, 500);
+				for(int i=689; i < 1090; i++){
+					setSize(i, 490);
 				}
 			}
 		}
