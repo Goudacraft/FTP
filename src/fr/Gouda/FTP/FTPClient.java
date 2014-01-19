@@ -7,4 +7,8 @@ public class FTPClient {
 	client.setPassive(true);
 	//ftp4j api : sourceforge.net/projects/ftp4j/files/ftp4j/1.7.2/ftp4j-1.7.2.zip/download
 	//prob il faut que ça soit la class principale 
+
+
+
+
 }
