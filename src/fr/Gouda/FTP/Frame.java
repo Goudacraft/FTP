@@ -23,6 +23,7 @@ import javax.swing.JTextPane;
 import javax.swing.JTree;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
+import javax.swing.tree.TreePath;
 
 public class Frame extends JFrame implements ActionListener {
 
@@ -61,6 +62,11 @@ public class Frame extends JFrame implements ActionListener {
 	public JSeparator JSeperator_Split = new JSeparator();
 	
 	public JLabel   Border_Console = new JLabel();
+	
+	public TreePath TreePath_local = new TreePath("TP");
+	
+	
+
 
 	public void Font(){
 		Border_Console.setFont(new Font("Arial", Font.PLAIN, 12));
