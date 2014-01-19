@@ -6,5 +6,5 @@ public class FTPClient {
 	client.login("cucch_13675533","Halimi02");
 	client.setPassive(true);
 	//ftp4j api : sourceforge.net/projects/ftp4j/files/ftp4j/1.7.2/ftp4j-1.7.2.zip/download
-	
+	//prob il faut que ça soit la class principale 
 }
