@@ -1,10 +1,28 @@
 package fr.Gouda.FTP;
 
-import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.JTree;
+import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 public class Frame extends JFrame implements ActionListener {
 
@@ -23,13 +41,17 @@ public class Frame extends JFrame implements ActionListener {
 					JTree_FTP = new JTree();
 
 	public JMenuBar JMB = new JMenuBar();
+	
+	public JTextArea 	JTA = new JTextArea(),
+						JTA2 = new JTextArea();
 
-	public JMenu    JM = new JMenu("File"),
+	public JMenu JM = new JMenu("File"),
 				    JM2 = new JMenu("Edit"),
-					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion..
+					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion.
 
 	public static JTextPane JTextPane_Console = new JTextPane();
-		
+
+
 	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER),
 						JSP2 = new JScrollPane();
 		
@@ -37,7 +59,7 @@ public class Frame extends JFrame implements ActionListener {
 					 JMI2 = new JMenuItem("Enregistrer");
 
 	public JSeparator JSeperator_Split = new JSeparator();
-
+	
 	public JLabel   Border_Console = new JLabel();
 
 	public void Font(){
@@ -52,7 +74,7 @@ public class Frame extends JFrame implements ActionListener {
 	}
 
 	public void JPanel(){
-		Border border = BorderFactory.createLineBorder(Color.blue);
+		Border border = BorderFactory.createLineBorder(Color.blue); // pk des couleurs???
 		Border border2 = BorderFactory.createLineBorder(Color.red);
 		Border border3 = BorderFactory.createLineBorder(Color.darkGray);
 
@@ -129,7 +151,6 @@ public class Frame extends JFrame implements ActionListener {
 	}
 		
 	public void Tree(){
-	//	JTree_Local.add(JSP);
 		JTree_Local.setBounds(20, 20, 520, 175);
 		JTree_Local.setEditable(true);
 		JTree_Local.setLayout(null);
