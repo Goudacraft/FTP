@@ -122,7 +122,6 @@ public class Frame extends JFrame implements ActionListener {
 		JButton_Console.setBorderPainted(false);
 		JButton_Console.setBorder(null);
 
-		
 		JPanel_FTP.add(JButton_Console);
 	}
 
