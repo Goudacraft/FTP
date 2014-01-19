@@ -26,7 +26,7 @@ public class Frame extends JFrame implements ActionListener {
 
 	public JMenu    JM = new JMenu("File"),
 				    JM2 = new JMenu("Edit"),
-					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion.
+					JMenu_Connexion = new JMenu("Connexion");   // TODO: Faire nouveau Frame pour entrer connexion..
 
 	public static JTextPane JTextPane_Console = new JTextPane();
 		
