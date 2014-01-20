@@ -41,7 +41,7 @@ public class Frame extends JFrame implements ActionListener {
 		
 	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	public JSeparator JSeperator_Split = new JSeparator();
+	public JSplitPane JSplitPane_Split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, JPanel_Local, JPanel_FTP);
 
 	public JLabel   Border_Console = new JLabel();
 
@@ -89,9 +89,15 @@ public class Frame extends JFrame implements ActionListener {
 	}
 
 	public void Seperator(){
-		JSeperator_Split.setOrientation(SwingConstants.HORIZONTAL);
+/*		JSplitPane_Split.setOneTouchExpandable(true);
+		//JSplitPane_Split.setDividerLocation(150);
 
-		add(JSeperator_Split);
+	/*	//Provide minimum sizes for the two components in the split pane
+		Dimension minimumSize = new Dimension(100, 50);
+		JPanel_Local.setMinimumSize(minimumSize);
+		JPanel_FTP.setMinimumSize(minimumSize);
+
+		add(JSplitPane_Split);*/
 	}
 
 	public void Button(){
