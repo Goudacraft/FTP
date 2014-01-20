@@ -1,5 +1,5 @@
 package fr.Gouda.FTP;
-import fr.Gouda.FTP.FTPClient;
+import it.sauronsoftware.ftp4j.FTPClient;
 import javax.swing.*;
 
 public class Main {
