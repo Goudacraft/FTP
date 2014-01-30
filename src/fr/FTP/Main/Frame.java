@@ -14,40 +14,50 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
 	public JPanel   JPanel_Local = new JPanel(),
-					JPanel_FTP = new JPanel(),
-					JPanel_Console = new JPanel();
+			JPanel_FTP = new JPanel(),
+			JPanel_Console = new JPanel();
 
 	public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
-					JButton_Parcourir_FTP = new JButton("Parcourir"),
-					JButton_Console = new JButton("Console");
+			JButton_Parcourir_FTP = new JButton("Parcourir"),
+			JButton_Console = new JButton("Console");
 
 	public JTree 	JTree_Local = new JTree(),
-					JTree_FTP = new JTree();
+			JTree_FTP = new JTree();
 
 	public JMenuBar JMenuBar = new JMenuBar();
 
 	public JMenu    JMenu_File = new JMenu("File"),
-				    JMenu_Edit = new JMenu("Edit"),
-					JMenu_Connexion = new JMenu("Connexion"),   // TODO: Faire nouveau Frame pour entrer connexion.
-					JMenu_About = new JMenu("About");
+			JMenu_Edit = new JMenu("Edit"),
+			JMenu_Connexion = new JMenu("Connexion"),   // TODO: Faire nouveau Frame pour entrer connexion.
+			JMenu_About = new JMenu("About");
 
-	public JMenuItem    JMenuItem_Ouvrir = new JMenuItem("Ouvrir"),             // JMenu_File
-						JMenuItem_Enregistrer = new JMenuItem("Enregistrer"),   // JMenu_File
+	public JMenuItem 	JMenuItem_Ouvrir = new JMenuItem("Ouvrir"),             // JMenu_File
+				JMenuItem_Enregistrer = new JMenuItem("Enregistrer"),   // JMenu_File
 
-						JMenuItem_SurNous = new JMenuItem("Sur Nous"),          // JMenu_About
-						JMenuItem_Rapport = new JMenuItem("Rapport Erreur");    // JMenu_About
+				JMenuItem_SurNous = new JMenuItem("Sur Nous"),          // JMenu_About
+				JMenuItem_Rapport = new JMenuItem("Rapport Erreur");    // JMenu_About
 
 	public static JTextPane JTextPane_Console = new JTextPane();
 		
-	public JScrollPane 	JScrollPane_Console = new JScrollPane(JTextPane_Console, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	public JScrollPane JScrollPane_Console = new JScrollPane(JTextPane_Console, 
+								JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
+								JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
 	public JSplitPane JSplitPane_Split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, JPanel_Local, JPanel_FTP);
 
-	public JLabel   Border_Console = new JLabel();
+	public JLabel Border_Console = new JLabel();
 
+
+	/** 
+		* Sets font for specified Object *
+	*/
 	public void Font(){
 		Border_Console.setFont(new Font("Arial", Font.PLAIN, 12));
 	}
+	
+	/**
+		* Sets border to specified object *
+	*/
 
 	public void Border(){
 		Border_Console.setBorder(BorderFactory.createTitledBorder("Console"));
@@ -55,6 +65,10 @@ public class Frame extends JFrame implements ActionListener {
 
 		JPanel_Console.add(Border_Console, BorderLayout.CENTER);
 	}
+
+	/**
+		* Init JPanels: FTP section, Local & Console *
+	*/
 
 	public void JPanel(){
 		Border border = BorderFactory.createLineBorder(Color.blue);
@@ -87,6 +101,10 @@ public class Frame extends JFrame implements ActionListener {
 	public void Label(){
 
 	}
+	
+	/**
+		* Adds JSperator in between FTP and Local JPanel *
+	*/
 
 	public void Seperator(){
 /*		JSplitPane_Split.setOneTouchExpandable(true);
@@ -99,6 +117,10 @@ public class Frame extends JFrame implements ActionListener {
 
 		add(JSplitPane_Split);*/
 	}
+	
+	/**
+		* Init JButtons *
+	*/
 
 	public void Button(){
 		JButton_Parcourir_Local.setFocusPainted(false);
@@ -130,6 +152,10 @@ public class Frame extends JFrame implements ActionListener {
 
 		JPanel_FTP.add(JButton_Console);
 	}
+	
+	/**
+		* Init JTextPane for Console + JScrollPane *
+	*/
 
 	public void TextPane(){
 		JScrollPane_Console.setBounds(15, 20, 369, 405);
@@ -138,7 +164,7 @@ public class Frame extends JFrame implements ActionListener {
 		JPanel_Console.add(JScrollPane_Console);
 	}
 		
-	public void Tree(){
+	public void Tree(){	//TODO: Find a better way to display files.
 		JTree_Local.setBounds(20, 20, 520, 175);
 		JTree_Local.setEditable(true);
 		JTree_Local.setLayout(null);
