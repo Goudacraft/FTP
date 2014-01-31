@@ -19,4 +19,23 @@ public class Main {
 		GUI.setVisible(true);
 		GUI.setResizable(false);
 	}
+	
+	
+	public static FTPClient connect(String "ftp.cuccfree.com", String "cucch_13675533", String "Halimi02");
+	FTPClient client = new FTPClient();
+    System.out.println("Connecting to " + ipAddress + " as " + userName + "/" + password);
+    try
+    {
+            client.setType(FTPClient.TYPE_BINARY);
+            client.connect("ftp.cuccfree.com");
+            client.login("cucch_13675533", "Halimi02");
+            return client;
+    }
+    catch (Exception e)
+    {
+            e.printStackTrace();
+            return null;
+    }
+}
+
 }
