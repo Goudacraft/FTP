@@ -17,6 +17,6 @@ public class Main {
 		GUI.setLocationRelativeTo(null);
 		GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GUI.setVisible(true);
-	//	GUI.setResizable(false);
+		GUI.setResizable(false);
 	}
 }
