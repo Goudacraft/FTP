@@ -14,36 +14,36 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
 	public JPanel   JPanel_Local = new JPanel(),
-			JPanel_FTP = new JPanel(),
-			JPanel_Console = new JPanel();
+					JPanel_FTP = new JPanel(),
+					JPanel_Console = new JPanel();
 
 	public JButton	JButton_Parcourir_Local = new JButton("Parcourir"),
-			JButton_Parcourir_FTP = new JButton("Parcourir"),
-			JButton_Console = new JButton("Console");
+					JButton_Parcourir_FTP = new JButton("Parcourir"),
+					JButton_Console = new JButton("Console");
 
 	public JTree 	JTree_Local = new JTree(),
-			JTree_FTP = new JTree();
+					JTree_FTP = new JTree();
 
 	public JMenuBar JMenuBar = new JMenuBar();
 
 	public JMenu    JMenu_File = new JMenu("File"),
-			JMenu_Edit = new JMenu("Edit"),
-			JMenu_Connexion = new JMenu("Connexion"),   // TODO: Faire nouveau Frame pour entrer connexion.
-			JMenu_About = new JMenu("About");
+					JMenu_Edit = new JMenu("Edit"),
+					JMenu_Connexion = new JMenu("Connexion"),   // TODO: Faire nouveau Frame pour entrer connexion.
+					JMenu_About = new JMenu("About");
 
 	public JMenuItem 	JMenuItem_Ouvrir = new JMenuItem("Ouvrir"),             // JMenu_File
-				JMenuItem_Enregistrer = new JMenuItem("Enregistrer"),   // JMenu_File
+						JMenuItem_Enregistrer = new JMenuItem("Enregistrer"),   // JMenu_File
 
-				JMenuItem_SurNous = new JMenuItem("Sur Nous"),          // JMenu_About
-				JMenuItem_Rapport = new JMenuItem("Rapport Erreur");    // JMenu_About
+						JMenuItem_SurNous = new JMenuItem("Sur Nous"),          // JMenu_About
+						JMenuItem_Rapport = new JMenuItem("Rapport Erreur");    // JMenu_About
 
 	public static JTextPane JTextPane_Console = new JTextPane();
 		
 	public JScrollPane JScrollPane_Console = new JScrollPane(JTextPane_Console, 
-								JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
-								JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+															JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+															JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	public JSplitPane JSplitPane_Split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, JPanel_Local, JPanel_FTP);
+	public JSplitPane JSplitPane_Split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(JPanel_Local),new JScrollPane(JPanel_FTP));
 
 	public JLabel Border_Console = new JLabel();
 
@@ -51,6 +51,7 @@ public class Frame extends JFrame implements ActionListener {
 	/** 
 		* Sets font for specified Object *
 	*/
+
 	public void Font(){
 		Border_Console.setFont(new Font("Arial", Font.PLAIN, 12));
 	}
@@ -107,15 +108,14 @@ public class Frame extends JFrame implements ActionListener {
 	*/
 
 	public void Seperator(){
-/*		JSplitPane_Split.setOneTouchExpandable(true);
+	/*	JSplitPane_Split.setOneTouchExpandable(true);
 		//JSplitPane_Split.setDividerLocation(150);
 
-	/*	//Provide minimum sizes for the two components in the split pane
 		Dimension minimumSize = new Dimension(100, 50);
 		JPanel_Local.setMinimumSize(minimumSize);
-		JPanel_FTP.setMinimumSize(minimumSize);
+		JPanel_FTP.setMinimumSize(minimumSize);*/
 
-		add(JSplitPane_Split);*/
+		add(JSplitPane_Split);
 	}
 	
 	/**
