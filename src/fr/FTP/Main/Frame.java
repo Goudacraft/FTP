@@ -43,8 +43,6 @@ public class Frame extends JFrame implements ActionListener {
 															JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 															JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	public JSplitPane JSplitPane_Split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(JPanel_Local),new JScrollPane(JPanel_FTP));
-
 	public JLabel Border_Console = new JLabel();
 
 
@@ -101,21 +99,6 @@ public class Frame extends JFrame implements ActionListener {
 
 	public void Label(){
 
-	}
-	
-	/**
-		* Adds JSperator in between FTP and Local JPanel *
-	*/
-
-	public void Seperator(){
-	/*	JSplitPane_Split.setOneTouchExpandable(true);
-		//JSplitPane_Split.setDividerLocation(150);
-
-		Dimension minimumSize = new Dimension(100, 50);
-		JPanel_Local.setMinimumSize(minimumSize);
-		JPanel_FTP.setMinimumSize(minimumSize);*/
-
-		add(JSplitPane_Split);
 	}
 	
 	/**
@@ -207,7 +190,6 @@ public class Frame extends JFrame implements ActionListener {
 	public void init(){
 		TextPane();
 		JPanel();
-		Seperator();
 		Tree();
 		MenuBar();
 		MenuItem();
