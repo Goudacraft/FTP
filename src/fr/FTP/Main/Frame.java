@@ -9,6 +9,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * @author : 3751_Creator & Goudacraft
+ */
+
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
