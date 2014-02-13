@@ -225,11 +225,11 @@ public class Frame extends JFrame implements ActionListener {
 			}
 		}
 		if(src == JButton_Parcourir_FTP){
-			Console.Error("ERROR !!!!!");
-			Console.Info("INFO !!!!!");
-			Console.Warning("WARNING !!!!!");
-			Console.Succes("SUCCES !!!!!");
-			Console.Error("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
+			Console.setError("ERROR !!!!!");
+			Console.setInfo("INFO !!!!!");
+			Console.setWarning("WARNING !!!!!");
+			Console.setSucces("SUCCES !!!!!");
+			Console.setError("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
 		}
 		if(src == JMenuItem_SurNous){
 			try {
