@@ -8,6 +8,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
+import java.net.URL;
 
 /**
  * @author : 3751_Creator & Goudacraft
@@ -185,10 +187,15 @@ public class Frame extends JFrame implements ActionListener {
 		JMenuItem_SurNous.addActionListener(this);
 	}
 
+	public void Tooltip(){
+		JMenuItem_Rapport.setToolTipText("Demande une connexion internet");
+	}
+
 	public void preInit(){
 		Font();
 		Border();
 		Button();
+		Tooltip();
 	}
 
 	public void init(){
@@ -236,6 +243,14 @@ public class Frame extends JFrame implements ActionListener {
 				new AboutMain();
 			} catch (Exception e1) {
 				System.out.println("Cannot load About.java");
+				e1.printStackTrace();
+			}
+		}
+		if(src == JMenuItem_Rapport){
+			try {
+				Desktop.getDesktop().browse(new URL("https://github.com/Goudacraft/FTP/issues").toURI());
+			} catch (Exception e1) {
+				System.out.println("Cannot load Page");
 				e1.printStackTrace();
 			}
 		}

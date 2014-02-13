@@ -19,7 +19,7 @@ public class AboutMain {
 
 		GUI.setSize(300, 450);
 		GUI.setLocationRelativeTo(null);
-		GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		GUI.setVisible(true);
 		GUI.setResizable(false);
 	}
