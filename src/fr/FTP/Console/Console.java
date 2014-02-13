@@ -14,7 +14,7 @@ public class Console extends fr.FTP.Main.Frame {
 	private static StyledDocument Text = JTextPane_Console.getStyledDocument();
 	private static SimpleAttributeSet Colors = new SimpleAttributeSet();
 
-	public static void Error(String error){
+	public static void setError(String error){
 		StyleConstants.setForeground(Colors, Color.RED);
 		try{
 			Text.insertString(0, error+"\n", Colors);
@@ -22,14 +22,14 @@ public class Console extends fr.FTP.Main.Frame {
 
 	}
 
-	public static void Info(String info){
+	public static void setInfo(String info){
 		StyleConstants.setForeground(Colors, Color.BLACK);
 		try{
 			Text.insertString(0, info+"\n", Colors);
 		}catch(Exception e) { System.out.println(e); }
 	}
 
-	public static void Warning(String warn){
+	public static void setWarning(String warn){
 		Color ORANGE = new Color(252, 156, 51);
 		StyleConstants.setForeground(Colors, ORANGE);
 		try{
@@ -37,7 +37,7 @@ public class Console extends fr.FTP.Main.Frame {
 		}catch(Exception e) { System.out.println(e); }
 	}
 
-	public static void Succes(String succes){
+	public static void setSucces(String succes){
 		Color DARK_GREEN = new Color(58, 157, 52);
 		StyleConstants.setForeground(Colors, DARK_GREEN);
 		try{
