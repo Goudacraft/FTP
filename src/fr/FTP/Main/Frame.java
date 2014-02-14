@@ -8,7 +8,6 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URI;
 import java.net.URL;
 
 /**
@@ -185,6 +184,7 @@ public class Frame extends JFrame implements ActionListener {
 		JMenu_About.add(JMenuItem_Rapport);
 
 		JMenuItem_SurNous.addActionListener(this);
+		JMenuItem_Rapport.addActionListener(this);
 	}
 
 	public void Tooltip(){
@@ -239,12 +239,15 @@ public class Frame extends JFrame implements ActionListener {
 			Console.setError("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
 		}
 		if(src == JMenuItem_SurNous){
-			try {
+			String yo = "<hmtl><b>Auteurs:</b> Goudacraft & 3751_Creator</hmtl>";
+			JOptionPane.showMessageDialog(null, yo, "Sur Nous", JOptionPane.PLAIN_MESSAGE); //TODO: faire logo.
+
+		/*	try {
 				new AboutMain();
 			} catch (Exception e1) {
 				System.out.println("Cannot load About.java");
 				e1.printStackTrace();
-			}
+			}*/
 		}
 		if(src == JMenuItem_Rapport){
 			try {
