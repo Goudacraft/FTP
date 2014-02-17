@@ -48,6 +48,8 @@ public class Frame extends JFrame implements ActionListener {
 															JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 															JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
+	//public JFileChooser JFileChooser_FTP = new JFileChooser();
+
 	public JLabel Border_Console = new JLabel();
 
 
@@ -187,6 +189,12 @@ public class Frame extends JFrame implements ActionListener {
 		JMenuItem_Rapport.addActionListener(this);
 	}
 
+	public void FileChooser(){
+		/*add(JFileChooser_FTP);
+
+		JFileChooser_FTP.addActionListener(this);*/
+	}
+
 	public void Tooltip(){
 		JMenuItem_Rapport.setToolTipText("Demande une connexion internet");
 	}
@@ -205,6 +213,7 @@ public class Frame extends JFrame implements ActionListener {
 		MenuBar();
 		MenuItem();
 		Label();
+		FileChooser();
 	}
 		
 	public Frame(){
@@ -232,11 +241,14 @@ public class Frame extends JFrame implements ActionListener {
 			}
 		}
 		if(src == JButton_Parcourir_FTP){
-			Console.setError("ERROR !!!!!");
+
+			Console.getName(JTextPane_Console);
+
 			Console.setInfo("INFO !!!!!");
 			Console.setWarning("WARNING !!!!!");
 			Console.setSucces("SUCCES !!!!!");
-			Console.setError("This is a lot of text because I woulike to see if it works !!!!! Aperently this is not enough of text!!! Awwwwwww............");
+			Console.setError("This is a error ");
+			Console.setCustom(100, 100, 100, "dg");
 		}
 		if(src == JMenuItem_SurNous){
 			String yo = "<hmtl><b>Auteurs:</b> Goudacraft & 3751_Creator</hmtl>";
@@ -256,6 +268,9 @@ public class Frame extends JFrame implements ActionListener {
 				System.out.println("Cannot load Page");
 				e1.printStackTrace();
 			}
+		}
+		if(src == JButton_Parcourir_FTP){
+			//JFileChooser_FTP.showOpenDialog(this);
 		}
 	}
 }
