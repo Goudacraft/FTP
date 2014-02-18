@@ -2,6 +2,7 @@ package fr.FTP.Main;
 
 import fr.FTP.Console.Console;
 import fr.FTP.About.AboutMain;
+import fr.FTP.Console.Console.Level;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -242,13 +243,12 @@ public class Frame extends JFrame implements ActionListener {
 		}
 		if(src == JButton_Parcourir_FTP){
 
-			Console.getName(JTextPane_Console);
-
-			Console.setInfo("INFO !!!!!");
-			Console.setWarning("WARNING !!!!!");
-			Console.setSucces("SUCCES !!!!!");
-			Console.setError("This is a error ");
-			Console.setCustom(100, 100, 100, "dg");
+			Console.setName(JTextPane_Console);
+			Console.add(Level.SUCCES, "SUCCES !!!!!");
+			Console.add(Level.ERROR, "This is a error ");
+			Console.addCustom("USER", 100, 100, 100, "dg");
+			Console.add(Level.INFO, "Yo");
+			Console.add(Level.WARNING, "Yo");
 		}
 		if(src == JMenuItem_SurNous){
 			String yo = "<hmtl><b>Auteurs:</b> Goudacraft & 3751_Creator</hmtl>";
