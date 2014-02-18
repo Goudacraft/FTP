@@ -251,15 +251,11 @@ public class Frame extends JFrame implements ActionListener {
 			Console.add(Level.WARNING, "Warning!!!!");
 		}
 		if(src == JMenuItem_SurNous){
-			String yo = "<hmtl><b>Auteurs:</b> Goudacraft & 3751_Creator</hmtl>";
-			JOptionPane.showMessageDialog(null, yo, "Sur Nous", JOptionPane.PLAIN_MESSAGE); //TODO: faire logo.
-
-		/*	try {
-				new AboutMain();
-			} catch (Exception e1) {
-				System.out.println("Cannot load About.java");
-				e1.printStackTrace();
-			}*/
+			String msg =
+						"<html><b>Auteurs:</b> Goudacraft & 3751_Creator" +
+						"<br/><b>Version:</b> Alpha 1.0" +
+						"</html>";
+			JOptionPane.showMessageDialog(null, msg, "Sur Nous", JOptionPane.PLAIN_MESSAGE); //TODO: faire logo.
 		}
 		if(src == JMenuItem_Rapport){
 			try {
