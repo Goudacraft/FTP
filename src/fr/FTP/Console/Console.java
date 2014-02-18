@@ -77,7 +77,8 @@ public class Console {
 	 * @param R Red Color. 0 <= R <= 255  |  [0;255]
 	 * @param G Green Color. 0 <= R <= 255  |  [0;255]
 	 * @param B Blue Color. 0 <= R <= 255  |  [0;255]
-	 * @param Custom Adds a custom message with a specific givin color to the console.
+	 * @param level Level of the message
+	 * @param Message Adds a custom message with a specific givin color to the console.
 	 */
 	public static void addCustom(String level, int R, int G, int B, String Message){
 		try{

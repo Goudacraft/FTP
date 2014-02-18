@@ -244,11 +244,11 @@ public class Frame extends JFrame implements ActionListener {
 		if(src == JButton_Parcourir_FTP){
 
 			Console.setName(JTextPane_Console);
-			Console.add(Level.SUCCES, "SUCCES !!!!!");
+			Console.add(Level.SUCCES, "This is a succes message");
 			Console.add(Level.ERROR, "This is a error ");
-			Console.addCustom("USER", 100, 100, 100, "dg");
-			Console.add(Level.INFO, "Yo");
-			Console.add(Level.WARNING, "Yo");
+			Console.addCustom("USER", 100, 100, 100, "This a custom message with custom rgb 100/100/100 and a custom USER level.");
+			Console.add(Level.INFO, "Information");
+			Console.add(Level.WARNING, "Warning!!!!");
 		}
 		if(src == JMenuItem_SurNous){
 			String yo = "<hmtl><b>Auteurs:</b> Goudacraft & 3751_Creator</hmtl>";
