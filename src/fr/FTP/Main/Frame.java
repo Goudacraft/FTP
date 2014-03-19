@@ -1,7 +1,6 @@
 package fr.FTP.Main;
 
 import fr.FTP.Console.Console;
-import fr.FTP.About.AboutMain;
 import fr.FTP.Console.Console.Level;
 
 import javax.swing.*;
@@ -13,6 +12,7 @@ import java.net.URL;
 
 /**
  * @author : 3751_Creator & Goudacraft
+ * @Java: 1.8
  */
 
 public class Frame extends JFrame implements ActionListener {
